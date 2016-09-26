@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+
+
+    <script type="text/babel">
+
+	var Motor = React.createClass({
+		render: function () {
+			return (
+				<div>
+					<h3>{this.props.nama}</h3>
+					<p>{this.props.merek}</p>
+					<p>{this.props.tahun}</p>
+					<p>{this.props.warna}</p>
+				</div>
+			);
+		}
+	});
+
+
+	ReactDOM.render(
+			<div>
+				<Motor nama="r15" merek="yamaha" tahun="2015" warna="merah" />
+				<Motor nama="cbr150" merek="honda" tahun="2016" warna="putih" />
+				<Motor nama="z125" merek="kawasaki" tahun="2016" warna="hijau" />
+				<Motor nama="klx150 BF" merek="kawasaki" tahun="2016" warna="kuning" />
+			</div>, document.getElementById('example')
+		);
+    </script>
+  </body>
+</html>
